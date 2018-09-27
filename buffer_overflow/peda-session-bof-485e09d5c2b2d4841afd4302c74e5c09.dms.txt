@@ -1,2 +1,2 @@
-break *0x600590
+break hidden
 
