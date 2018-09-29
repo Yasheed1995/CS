@@ -1,0 +1,9396 @@
+<head>
+  <style>
+    table {
+    border-collapse: collapse;
+    }
+
+    td, th {
+    border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+<h3>auto.hpp</h3>
+<p>NOTE: global variables 'auto_state', 'auto_display', and 'autoEnabled' have been removed.</p>
+<ul>
+<li>[1] output argument moved to beginning of argument list</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>autoGetName</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>autoStep</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>auto_apply_tail</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>auto_recreate_insn</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>enable_auto</td>
+<td align="center"></td>
+<td>to be used instead of 'autoEnabled'</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_auto_display</td>
+<td align="center"></td>
+<td>to be used instead of 'auto_display'</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_auto_state</td>
+<td align="center"></td>
+<td>to be used instead of 'auto_state'</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>is_auto_enabled</td>
+<td align="center"></td>
+<td>to be used instead of 'autoEnabled'</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>set_auto_state</td>
+<td align="center"></td>
+<td>to be used instead of 'auto_state'</td>
+</tr>
+<tr>
+<td>analyze_area</td>
+<td>plan_and_wait</td>
+<td align="center"></td>
+<td>added 'final_pass' argument (true for analyze_area behaviour)</td>
+</tr>
+<tr>
+<td>autoCancel</td>
+<td>auto_cancel</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>autoIsOk</td>
+<td>auto_is_ok</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>autoMark</td>
+<td>auto_mark</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>autoUnmark</td>
+<td>auto_unmark</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>autoWait</td>
+<td>auto_wait</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>auto_get</td>
+<td></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>noUsed</td>
+<td>plan_ea</td>
+<td align="center"></td>
+<td>(ea_t ea) variant</td>
+</tr>
+<tr>
+<td>noUsed</td>
+<td>plan_range</td>
+<td align="center"></td>
+<td>(ea_t sEA, ea_t eEA) variant</td>
+</tr>
+<tr>
+<td>setStat</td>
+<td>set_ida_state</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>showAddr</td>
+<td>show_addr</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>showAuto</td>
+<td>show_auto</td>
+<td align="center"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>bitrange.hpp</h3>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bitrange_t::extract</td>
+<td>argument type: 'int' changed to 'size_t'</td>
+</tr>
+<tr>
+<td>bitrange_t::inject</td>
+<td>argument type: 'int' changed to 'size_t'</td>
+</tr>
+</tbody>
+</table>
+<h3>bytes.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clrFlbits</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>do3byte</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>doASCI</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>doVar</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>do_unknown</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'del_items' instead</td>
+</tr>
+<tr>
+<td>do_unknown_range</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'del_items' instead</td>
+</tr>
+<tr>
+<td>f_is3byte</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>getRadixEA</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_3byte</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_many_bytes</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'get_bytes' instead</td>
+</tr>
+<tr>
+<td>get_many_bytes_ex</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'get_bytes' instead</td>
+</tr>
+<tr>
+<td>is3byte</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isVar</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>noImmd</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>setFlags</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>setFlbits</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>tribyteflag</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>add_mapping</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>attach_custom_data_format</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>del_items</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>del_mapping</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>detach_custom_data_format</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_bytes</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_first_hidden_range</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_last_hidden_range</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_mapping</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_mappings_qty</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>is_attached_custom_data_format</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>revert_byte</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>update_hidden_range</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>use_mapping</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>add_hidden_area</td>
+<td>add_hidden_range</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>alignflag</td>
+<td>align_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>asciflag</td>
+<td>strlit_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>binflag</td>
+<td>bin_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>byteflag</td>
+<td>byte_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>charflag</td>
+<td>char_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>chunksize</td>
+<td>chunk_size</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>chunkstart</td>
+<td>chunk_start</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>codeflag</td>
+<td>code_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>custflag</td>
+<td>cust_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>custfmtflag</td>
+<td>custfmt_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>decflag</td>
+<td>dec_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>delValue</td>
+<td>del_value</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_hidden_area</td>
+<td>del_hidden_range</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>do16bit</td>
+<td>create_16bit_data</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>do32bit</td>
+<td>create_32bit_data</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>doAlign</td>
+<td>create_align</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>doByte</td>
+<td>create_byte</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>doCustomData</td>
+<td>create_custdata</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>doDouble</td>
+<td>create_double</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>doDwrd</td>
+<td>create_dword</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>doFloat</td>
+<td>create_float</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>doImmd</td>
+<td>set_immd</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>doOwrd</td>
+<td>create_oword</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>doPackReal</td>
+<td>create_packed_real</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>doQwrd</td>
+<td>create_qword</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>doStruct</td>
+<td>create_struct</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>doTbyt</td>
+<td>create_tbyte</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>doWord</td>
+<td>create_word</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>doYwrd</td>
+<td>create_yword</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>doZwrd</td>
+<td>create_zword</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>do_data_ex</td>
+<td>create_data</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>doubleflag</td>
+<td>double_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>dwrdflag</td>
+<td>dword_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>enumflag</td>
+<td>enum_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_hasRef</td>
+<td>f_has_xref</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_isASCII</td>
+<td>f_is_strlit</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_isAlign</td>
+<td>f_is_align</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_isByte</td>
+<td>f_is_byte</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_isCode</td>
+<td>f_is_code</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_isCustom</td>
+<td>f_is_custom</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_isData</td>
+<td>f_is_data</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_isDouble</td>
+<td>f_is_double</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_isDwrd</td>
+<td>f_is_dword</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_isFloat</td>
+<td>f_is_float</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_isHead</td>
+<td>f_is_head</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_isNotTail</td>
+<td>f_is_not_tail</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_isOwrd</td>
+<td>f_is_oword</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_isPackReal</td>
+<td>f_is_pack_real</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_isQwrd</td>
+<td>f_is_qword</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_isStruct</td>
+<td>f_is_struct</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_isTail</td>
+<td>f_is_tail</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_isTbyt</td>
+<td>f_is_tbyte</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_isWord</td>
+<td>f_is_word</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>f_isYwrd</td>
+<td>f_is_yword</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>floatflag</td>
+<td>float_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>fltflag</td>
+<td>flt_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>freechunk</td>
+<td>free_chunk</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>getDefaultRadix</td>
+<td>get_default_radix</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>getFlags</td>
+<td>get_full_flags</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>WARNING: 'getFlags' has not been renamed to 'get_flags'</td>
+</tr>
+<tr>
+<td>get_long</td>
+<td>get_dword</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_full_byte</td>
+<td>get_wide_byte</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_full_word</td>
+<td>get_wide_word</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_full_long</td>
+<td>get_wide_dword</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>getRadix</td>
+<td>get_radix</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_ascii_contents2</td>
+<td>get_strlit_contents</td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td>return type changed from 'bool' to 'ssize_t'; output argument 'usedsize' (in bytes) changed to 'maxcps' (in codepoints)</td>
+</tr>
+<tr>
+<td>get_cmt</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_custom_data_format</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>removed 'dtid' argument</td>
+</tr>
+<tr>
+<td>get_data_value</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_enum_id</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_flags_novalue</td>
+<td>get_flags</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>WARNING: 'getFlags' has not been renamed to 'get_flags'</td>
+</tr>
+<tr>
+<td>get_forced_operand</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_hidden_area</td>
+<td>get_hidden_range</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type: 'hidden_area_t <em>' has been renamed to 'hidden_range_t </em>'</td>
+</tr>
+<tr>
+<td>get_hidden_area_num</td>
+<td>get_hidden_range_num</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_hidden_area_qty</td>
+<td>get_hidden_range_qty</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_manual_insn</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td>return type changed from 'char *' to 'ssize_t';</td>
+</tr>
+<tr>
+<td>get_max_ascii_length</td>
+<td>get_max_strlit_length</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_next_hidden_range</td>
+<td>get_next_hidden_area</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type: 'hidden_area_t <em>' has been renamed to 'hidden_range_t </em>'</td>
+</tr>
+<tr>
+<td>get_opinfo</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_predef_insn_cmt</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td>moved from ints.hpp</td>
+</tr>
+<tr>
+<td>get_prev_hidden_range</td>
+<td>get_prev_hidden_area</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type: 'hidden_area_t <em>' has been renamed to 'hidden_range_t </em>'</td>
+</tr>
+<tr>
+<td>get_stroff_path</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_zero_areas</td>
+<td>get_zero_ranges</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>argument type: 'areaset_t' has been renamed to 'rangeset_t'</td>
+</tr>
+<tr>
+<td>getn_hidden_area</td>
+<td>getn_hidden_range</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type: 'hidden_area_t <em>' has been renamed to 'hidden_range_t </em>'</td>
+</tr>
+<tr>
+<td>hasExtra</td>
+<td>has_extra_cmts</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>hasRef</td>
+<td>has_xref</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>hasValue</td>
+<td>has_value</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>hexflag</td>
+<td>hex_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isASCII</td>
+<td>is_strlit</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isAlign</td>
+<td>is_align</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isByte</td>
+<td>is_byte</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isChar</td>
+<td>is_char</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isChar0</td>
+<td>is_char0</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isChar1</td>
+<td>is_char1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isCode</td>
+<td>is_code</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isCustFmt</td>
+<td>is_custfmt</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isCustFmt0</td>
+<td>is_custfmt0</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isCustFmt1</td>
+<td>is_custfmt1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isCustom</td>
+<td>is_custom</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isData</td>
+<td>is_data</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isDefArg</td>
+<td>is_defarg</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isDefArg0</td>
+<td>is_defarg0</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isDefArg1</td>
+<td>is_defarg1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isDouble</td>
+<td>is_double</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isDwrd</td>
+<td>is_dword</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isEnabled</td>
+<td>is_mapped</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isEnum</td>
+<td>is_enum</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isEnum0</td>
+<td>is_enum0</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isEnum1</td>
+<td>is_enum1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isFloat</td>
+<td>is_float</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isFloat0</td>
+<td>is_float0</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isFloat1</td>
+<td>is_float1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isFlow</td>
+<td>is_flow</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isFltnum</td>
+<td>is_fltnum</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isFop</td>
+<td>is_manual</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isFunc</td>
+<td>is_func</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isHead</td>
+<td>is_head</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isImmd</td>
+<td>has_immd</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isLoaded</td>
+<td>is_loaded</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isNotTail</td>
+<td>is_not_tail</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isNum</td>
+<td>is_numop</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isNum0</td>
+<td>is_numop0</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isNum1</td>
+<td>is_numop1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isOff</td>
+<td>is_off</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isOff0</td>
+<td>is_off0</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isOff1</td>
+<td>is_off1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isOwrd</td>
+<td>is_oword</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isPackReal</td>
+<td>is_pack_real</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isQwrd</td>
+<td>is_qword</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isSeg</td>
+<td>is_seg</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isSeg0</td>
+<td>is_seg0</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isSeg1</td>
+<td>is_seg1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isStkvar</td>
+<td>is_stkvar</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isStkvar0</td>
+<td>is_stkvar0</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isStkvar1</td>
+<td>is_stkvar1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isStroff</td>
+<td>is_stroff</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isStroff0</td>
+<td>is_stroff0</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isStroff1</td>
+<td>is_stroff1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isStruct</td>
+<td>is_struct</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isTail</td>
+<td>is_tail</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isTbyt</td>
+<td>is_tbyte</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isUnknown</td>
+<td>is_unknown</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isVoid</td>
+<td>is_suspop</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isWord</td>
+<td>is_word</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isYwrd</td>
+<td>is_yword</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isZwrd</td>
+<td>is_zword</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>make_ascii_string</td>
+<td>create_strlit</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>nextaddr</td>
+<td>next_addr</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>nextchunk</td>
+<td>next_chunk</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>nextthat</td>
+<td>next_that</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>noType</td>
+<td>clr_op_type</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>numflag</td>
+<td>num_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>octflag</td>
+<td>oct_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>offflag</td>
+<td>off_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>op_stroff</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>converted input 'ea_t' argument to 'const insn_t &amp;'</td>
+</tr>
+<tr>
+<td>owrdflag</td>
+<td>oword_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>packrealflag</td>
+<td>packreal_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>patch_many_bytes</td>
+<td>patch_bytes</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>prevaddr</td>
+<td>prev_addr</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>prevchunk</td>
+<td>prev_chunk</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>prevthat</td>
+<td>prev_that</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>print_ascii_string_type</td>
+<td>print_strlit_type</td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td>return type changed from 'char *' to 'bool'; added 'out_tooltip' and 'flags' arguments</td>
+</tr>
+<tr>
+<td>put_many_bytes</td>
+<td>put_bytes</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>qwrdflag</td>
+<td>qword_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>register_custom_data_format</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>removed 'dtid' argument</td>
+</tr>
+<tr>
+<td>segflag</td>
+<td>seg_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_opinfo</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'suppress_events' argument</td>
+</tr>
+<tr>
+<td>stkvarflag</td>
+<td>stkvar_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>stroffflag</td>
+<td>stroff_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>struflag</td>
+<td>stru_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>tbytflag</td>
+<td>tbyte_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>unregister_custom_data_format</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>removed 'dtid' argument</td>
+</tr>
+<tr>
+<td>wordflag</td>
+<td>word_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>ywrdflag</td>
+<td>yword_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>zwrdflag</td>
+<td>zword_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>compress.hpp</h3>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>process_zipfile64</td>
+<td>process_zipfile</td>
+</tr>
+<tr>
+<td>process_zipfile_entry64</td>
+<td>process_zipfile_entry</td>
+</tr>
+</tbody>
+</table>
+<h3>config.hpp (<strong>NEW</strong> file)</h3>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cfg_get_cc_header_path</td>
+<td>moved from idp.hpp</td>
+</tr>
+<tr>
+<td>cfg_get_cc_parm</td>
+<td>moved from idp.hpp</td>
+</tr>
+<tr>
+<td>cfg_get_cc_predefined_macros</td>
+<td>moved from idp.hpp</td>
+</tr>
+<tr>
+<td>cfgopt_t__apply</td>
+<td>moved from idp.hpp</td>
+</tr>
+<tr>
+<td>parse_config_value</td>
+<td>moved from idp.hpp</td>
+</tr>
+<tr>
+<td>read_config</td>
+<td>moved from idp.hpp</td>
+</tr>
+<tr>
+<td>read_config_file</td>
+<td>moved from idp.hpp</td>
+</tr>
+<tr>
+<td>read_config_string</td>
+<td>moved from idp.hpp</td>
+</tr>
+</tbody>
+</table>
+<h3>dbg.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>get_process_info</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'get_processes' instead</td>
+</tr>
+<tr>
+<td>get_process_qty</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'get_processes' instead</td>
+</tr>
+<tr>
+<td>getn_process</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'get_processes' instead</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>bpt_t::get_cnd_elang_idx</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_ip_val</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_sp_val</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>bpt_location_t::print</td>
+<td></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>choose_trace_file</td>
+<td></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>create_source_viewer</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>argument type: 'TWinControl' and 'TCustomControl' changed to 'TWidget'; added 'out_ccv' argument</td>
+</tr>
+<tr>
+<td>get_dbg_byte</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_trace_file_desc</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>internal_get_sreg_base</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>load_trace_file</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>source_file_t::open_srcview</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>argument type: 'TCustomControl' changed to 'TWidget'</td>
+</tr>
+<tr>
+<td>source_item_t::get_hint</td>
+<td></td>
+<td align="center">q</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>source_item_t::get_kind</td>
+<td>source_item_t::get_item_kind</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>diskio.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+<li>[3] return type changed from '[u]int32' to '[u]int64'/'qoff64_t'</li>
+<li>[4] input argument changed from '[u]int32' to '[u]int64'/'qoff64_t'</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th align="center">[3]</th>
+<th align="center">[4]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>create_generic_linput</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>echsize64</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>ecreateT</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>eseek64</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>free_ioports</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>qfsize64</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>qlgetz64</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>qlseek64</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>qlsize64</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>qltell64</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>choose_ioport_device</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>echsize</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>eseek</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>find_ioport</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>input argument converted to 'const ioports_t &amp;'</td>
+</tr>
+<tr>
+<td>find_ioport_bit</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>input argument converted to 'const ioports_t &amp;'</td>
+</tr>
+<tr>
+<td>get_special_folder</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>qfsize</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>qlgetz</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>qlseek</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>qlsize</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>qltell</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>read_ioports</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'ioport_t *' to 'ssize_t'; output argument converted 'ioports_t'</td>
+</tr>
+</tbody>
+</table>
+<h3>entry.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+<li>[3] added 'flags' argument</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th align="center">[3]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>add_entry</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+</tr>
+<tr>
+<td>get_entry_forwarder</td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>get_entry_name</td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>rename_entry</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+</tr>
+<tr>
+<td>set_entry_forwarder</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+</tr>
+</tbody>
+</table>
+<h3>enum.hpp</h3>
+<p>NOTE: global variable 'enums' has been removed.</p>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>add_selected_enum</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>get_bmask_node</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>get_selected_enum</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>init_enums</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>save_enums</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>set_enum_flag</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>term_enums</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>unmark_selected_enums</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>get_bmask_cmt</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+</tr>
+<tr>
+<td>get_enum_cmt</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+</tr>
+<tr>
+<td>get_enum_member_cmt</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+</tr>
+<tr>
+<td>get_first_serial_enum_member</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>get_last_serial_enum_member</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>get_next_serial_enum_member</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>get_prev_serial_enum_member</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<h3>err.h</h3>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>qstrerror</td>
+<td>buf argument removed; returns string in static buffer (thread-safe)</td>
+</tr>
+</tbody>
+</table>
+<h3>expr.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+<li>[3] input argument changed from pointer to reference</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th align="center">[3]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ExecuteFile</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'exec_idc_script' instead</td>
+</tr>
+<tr>
+<td>ExecuteLine, execute</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'eval_idc_snippet' instead</td>
+</tr>
+<tr>
+<td>call_idc_method</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>call_script_method</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'extlang_t::call_method' instead</td>
+</tr>
+<tr>
+<td>compile_script_file</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'extlang_t::compile_file' instead</td>
+</tr>
+<tr>
+<td>compile_script_func</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'extlang_t::compile_expr' instead</td>
+</tr>
+<tr>
+<td>create_idc_object</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>create_script_object</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'extlang_t::create_object' instead</td>
+</tr>
+<tr>
+<td>extlang_call_method_exists</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>'extlang_t::call_method' should always exist</td>
+</tr>
+<tr>
+<td>extlang_compile_file</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'extlang_t::compile_file' instead</td>
+</tr>
+<tr>
+<td>extlang_compile_file_exists</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>'extlang_t::compile_file' should always exist</td>
+</tr>
+<tr>
+<td>extlang_create_object_exists</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>'extlang_t::create_object' should always exist</td>
+</tr>
+<tr>
+<td>extlang_get_attr_exists</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>'extlang_t::get_attr' should always exist</td>
+</tr>
+<tr>
+<td>extlang_run_statements_exists</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>replaced by 'extlang_t::eval_statements', which should always exist</td>
+</tr>
+<tr>
+<td>extlang_set_attr_exists</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>'extlang_t::set_attr' should always exist</td>
+</tr>
+<tr>
+<td>extlang_unload_procmod</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'extlang_t::unload_procmod' instead</td>
+</tr>
+<tr>
+<td>get_extlang_fileext</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'extlang_t::fileext' instead</td>
+</tr>
+<tr>
+<td>get_extlangs</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'for_all_extlangs' instead</td>
+</tr>
+<tr>
+<td>get_idc_func_body</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_script_attr</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'extlang_t::get_attr' instead</td>
+</tr>
+<tr>
+<td>run_script_func</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'extlang_t::call_func' instead</td>
+</tr>
+<tr>
+<td>run_statements</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'extlang_t::eval_statements' instead</td>
+</tr>
+<tr>
+<td>set_idc_func_body</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_idc_func_ex</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'add_idc_func'/'del_idc_func' instead</td>
+</tr>
+<tr>
+<td>set_script_attr</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'extlang_t::set_attr' instead</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>add_idc_func</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>to be used instead of 'set_idc_func_ex'</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>compile_idc_snippet</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>del_idc_func</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>to be used instead of 'set_idc_func_ex'</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>eval_idc_snippet</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>find_extlang_by_index</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>find_idc_func</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>for_all_extlangs</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_extlang</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>always returns non-NULL</td>
+</tr>
+<tr>
+<td>Compile, CompileEx</td>
+<td>compile_idc_file</td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>CompileLine, CompileLineEx</td>
+<td>compile_idc_text</td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td>added 'resolver' argument</td>
+</tr>
+<tr>
+<td>Run</td>
+<td>call_idc_func</td>
+<td align="center">*</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td>swapped 'argsnum' and 'args'; argument type: 'int' changed to 'size_t'; added 'resolver' argument</td>
+</tr>
+<tr>
+<td>VarAssign</td>
+<td>copy_idcv</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>VarCopy</td>
+<td>deep_copy_idcv</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>VarDelAttr</td>
+<td>del_idcv_attr</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>VarDeref</td>
+<td>deref_idcv</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>VarFirstAttr</td>
+<td>first_idcv_attr</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>VarFloat</td>
+<td>idcv_float</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>VarFree</td>
+<td>free_idcv</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>VarGetAttr</td>
+<td>get_idcv_attr</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>VarGetClassName</td>
+<td>get_idcv_class_name</td>
+<td align="center">q</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>VarGetSlice</td>
+<td>get_idcv_slice</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>VarInt64</td>
+<td>idcv_int64</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>VarLastAttr</td>
+<td>last_idcv_attr</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>VarLong</td>
+<td>idcv_long</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>VarMove</td>
+<td>move_idcv</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>VarNextAttr</td>
+<td>next_idcv_attr</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>VarNum</td>
+<td>idcv_num</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>VarObject</td>
+<td>idcv_object</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>VarPrevAttr</td>
+<td>prev_idcv_attr</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>VarPrint</td>
+<td>print_idcv</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>VarRef</td>
+<td>create_idcv_ref</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>VarSetAttr</td>
+<td>set_idcv_attr</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>VarSetSlice</td>
+<td>set_idcv_slice</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>VarString2</td>
+<td>idcv_string</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>VarSwap</td>
+<td>swap_idcvs</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>calc_idc_expr</td>
+<td>eval_idc_expr</td>
+<td align="center">*</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>calcexpr</td>
+<td>eval_expr</td>
+<td align="center">*</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>calcexpr_long</td>
+<td>eval_expr_long</td>
+<td align="center">*</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>dosysfile</td>
+<td>exec_system_script</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>argument order has swapped</td>
+</tr>
+<tr>
+<td>find_extlang_by_ext</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'const extlang_t *' to 'extlang_object_t'</td>
+</tr>
+<tr>
+<td>find_extlang_by_name</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'const extlang_t *' to 'extlang_object_t'</td>
+</tr>
+<tr>
+<td>install_extlang</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>removed const from 'el' argument; return type changed from 'bool' to 'ssize_t'</td>
+</tr>
+<tr>
+<td>remove_extlang</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>removed const from 'el' argument</td>
+</tr>
+<tr>
+<td>select_extlang</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>removed const from 'el' argument</td>
+</tr>
+</tbody>
+</table>
+<h3>fixup.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+<li>[3] input argument changed from pointer to reference</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th align="center">[3]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>get_fixup_base</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'fd.get_base()' instead</td>
+</tr>
+<tr>
+<td>get_fixup_extdef_ea</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'fd.get_base() + fd.off' instead</td>
+</tr>
+<tr>
+<td>get_fixup_segdef_sel</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'fd.sel' instead</td>
+</tr>
+<tr>
+<td>set_custom_fixup</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'set_fixup' instead</td>
+</tr>
+<tr>
+<td>set_custom_fixup_ex</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'set_fixup' instead</td>
+</tr>
+<tr>
+<td>set_fixup_ex</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>calc_fixup_size</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>exists_fixup</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>find_custom_fixup</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>to be used instead of 'create_custom_fixup' (from idp.hpp)</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_fixup_handler</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_fixup_value</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_fixups</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>is_fixup_custom</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>patch_fixup_value</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_fixup</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_fixup_desc</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center">*</td>
+<td>return type changed from 'char <em>' to 'const char </em>'</td>
+</tr>
+<tr>
+<td>register_custom_fixup</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>input argument changed from 'const fixup_handler_t <em>' to 'const custom_fixup_handler_t </em>'; return type changed from 'int' to 'fixup_type_t'</td>
+</tr>
+<tr>
+<td>set_fixup</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>unregister_custom_fixup</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>input argument changed from 'int' to 'fixup_type_t'</td>
+</tr>
+</tbody>
+</table>
+<h3>fpro.h</h3>
+<ul>
+<li>[1] input argument changed from 'int32' to 'qoff64_t'</li>
+<li>[2] return type changed from 'int32' to 'qoff64_t'</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>qaccess</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>qgetline</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>qcopyfile64</td>
+<td>qcopyfile</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>qfseek64</td>
+<td>qfseek</td>
+<td>*</td>
+<td></td>
+</tr>
+<tr>
+<td>qftell64</td>
+<td>qftell</td>
+<td></td>
+<td>*</td>
+</tr>
+</tbody>
+</table>
+<h3>frame.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+<li>[3] input argument 'func_t *pfn' made const</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th align="center">[3]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>add_auto_stkpnt2</td>
+<td>add_auto_stkpnt</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>add_stkvar2</td>
+<td>define_stkvar</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>add_stkvar3</td>
+<td>add_stkvar</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'const insn_t &amp;' input argument</td>
+</tr>
+<tr>
+<td>build_stkvar_name</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center">*</td>
+<td>return type changed from 'char *' to 'ssize_t'</td>
+</tr>
+<tr>
+<td>calc_stkvar_struc_offset</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>converted input 'ea_t' argument to 'const insn_t &amp;'</td>
+</tr>
+<tr>
+<td>frame_off_args</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>frame_off_lvars</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>frame_off_retaddr</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>frame_off_savregs</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_frame_part</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center">*</td>
+<td>argument type: 'area_t' changed to 'range_t'</td>
+</tr>
+<tr>
+<td>get_frame_retsize</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_frame_size</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_stkvar</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'const insn_t &amp;' input argument</td>
+</tr>
+<tr>
+<td>is_funcarg_off</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>lvar_off</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>funcs.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a2funcoff</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>apply_idasgn</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>clear_func_struct</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_func_cmt</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'set_func_cmt("")' instead</td>
+</tr>
+<tr>
+<td>std_gen_func_header</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::gen_func_header' instead</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>is_same_func</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>lock_func_range</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>reanalyze_noret_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>add_func</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>second 'ea_t' argument made optional</td>
+</tr>
+<tr>
+<td>add_regarg2</td>
+<td>add_regarg</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>find_func_bounds</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td>removed 'ea' argument</td>
+</tr>
+<tr>
+<td>func_item_iterator_t::decode_preceding_insn</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'insn_t *' output argument</td>
+</tr>
+<tr>
+<td>func_item_iterator_t::decode_prev_insn</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'insn_t *' output argument</td>
+</tr>
+<tr>
+<td>func_setend</td>
+<td>set_func_end</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>func_setstart</td>
+<td>set_func_start</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_func_bits</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>input argument 'func_t *' made const</td>
+</tr>
+<tr>
+<td>get_func_bytes</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>input argument 'func_t *' made const</td>
+</tr>
+<tr>
+<td>get_func_cmt</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td>return type changed from 'char *' to 'ssize_t'</td>
+</tr>
+<tr>
+<td>get_func_limits</td>
+<td>get_func_ranges</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td>output argument converted from 'area_t <em>' to 'rangeset_t </em>'; return type changed from 'bool' to 'ea_t'</td>
+</tr>
+<tr>
+<td>get_func_name2</td>
+<td>get_func_name</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_idasgn_desc</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_idasgn_title</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td>return type changed from 'char *' to 'ssize_t'</td>
+</tr>
+<tr>
+<td>set_func_cmt</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>input argument 'func_t *' made const</td>
+</tr>
+</tbody>
+</table>
+<h3>gdl.hpp</h3>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>create_multirange_qflow_chart</td>
+<td>argument type: 'areavec_t' has been renamed to 'rangevec_t'</td>
+</tr>
+</tbody>
+</table>
+<h3>graph.hpp</h3>
+<ul>
+<li>[1] input argument changed from 'TCustomControl <em>' to 'graph_viewer_t </em>'</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>set_graph_dispatcher</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td>use 'hook_to_notification_point(HT_GRAPH, [...])' instead</td>
+</tr>
+<tr>
+<td>viewer_add_menu_item</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td>use 'viewer_attach_menu_item' instead</td>
+</tr>
+<tr>
+<td>viewer_del_menu_item</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>viewer_get_gli</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>clr_node_info2</td>
+<td>clr_node_info</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>create_disasm_graph</td>
+<td></td>
+<td align="center"></td>
+<td>argument type: 'areavec_t' has been renamed to 'rangevec_t'</td>
+</tr>
+<tr>
+<td>create_graph_viewer</td>
+<td></td>
+<td align="center"></td>
+<td>added 'title' argument; 'parent' argument made optional and reordered</td>
+</tr>
+<tr>
+<td>del_node_info2</td>
+<td>del_node_info</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_graph_viewer</td>
+<td></td>
+<td align="center"></td>
+<td>input argument changed from 'TForm <em>' to 'TWidget </em>'</td>
+</tr>
+<tr>
+<td>get_node_info2</td>
+<td>get_node_info</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_viewer_graph</td>
+<td></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>grentry</td>
+<td></td>
+<td align="center"></td>
+<td>'grentry' has been converted from a global variable to an inline function</td>
+</tr>
+<tr>
+<td>refresh_viewer</td>
+<td></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>set_node_info2</td>
+<td>set_node_info</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>viewer_center_on</td>
+<td></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>viewer_create_groups</td>
+<td></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>viewer_del_node_info</td>
+<td></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>viewer_delete_groups</td>
+<td></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>viewer_fit_window</td>
+<td></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>viewer_get_curnode</td>
+<td></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>viewer_get_node_info</td>
+<td></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>viewer_set_gli</td>
+<td></td>
+<td align="center">*</td>
+<td>added 'flags' argument</td>
+</tr>
+<tr>
+<td>viewer_set_groups_visibility</td>
+<td></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>viewer_set_node_info</td>
+<td></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>help.h</h3>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>askyn</td>
+<td>ask_yn</td>
+</tr>
+<tr>
+<td>askyn_v</td>
+<td>vask_yn</td>
+</tr>
+</tbody>
+</table>
+<h3>ida.hpp</h3>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ansi2idb</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>dto_copy_from_inf</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>dto_copy_to_inf</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>dto_init</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>idb2scr</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>scr2idb</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>showAllComments</td>
+<td>show_all_comments</td>
+</tr>
+<tr>
+<td>showComments</td>
+<td>show_comments</td>
+</tr>
+<tr>
+<td>showRepeatables</td>
+<td>show_repeatables</td>
+</tr>
+<tr>
+<td>toEA</td>
+<td>to_ea</td>
+</tr>
+</tbody>
+</table>
+<h3>idd.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th align="center">[1]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dbg_appcall</td>
+<td align="center">*</td>
+<td>swapped 'argnum' and 'argv'; argument type: 'int' changed to 'size_t'</td>
+</tr>
+</tbody>
+</table>
+<h3>idp.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>get_reg_info2</td>
+<td>get_reg_info</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_reg_name</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>invoke_callbacks</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>moved from loader.hpp</td>
+</tr>
+<tr>
+<td>hook_to_notification_point</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>moved from loader.hpp</td>
+</tr>
+<tr>
+<td>unhook_from_notification_point</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>moved from loader.hpp</td>
+</tr>
+<tr>
+<td>set_processor_type</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'char' to 'bool'; argument type: 'int' changed to 'setproc_level_t'</td>
+</tr>
+<tr>
+<td>parse_reg_name</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>cfg_get_cc_header_path</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>moved to config.hpp</td>
+</tr>
+<tr>
+<td>cfg_get_cc_parm</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>moved to config.hpp</td>
+</tr>
+<tr>
+<td>cfg_get_cc_predefined_macros</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>moved to config.hpp</td>
+</tr>
+<tr>
+<td>cfgopt_t__apply</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>moved to config.hpp</td>
+</tr>
+<tr>
+<td>parse_config_value</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>moved to config.hpp</td>
+</tr>
+<tr>
+<td>read_config</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>moved to config.hpp</td>
+</tr>
+<tr>
+<td>read_config_file</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>moved to config.hpp</td>
+</tr>
+<tr>
+<td>read_config_string</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>moved to config.hpp</td>
+</tr>
+<tr>
+<td>InstrIsSet</td>
+<td>has_insn_feature</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>str2regf</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>create_custom_fixup</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>gen_spcdef</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_t::out_specea' instead</td>
+</tr>
+<tr>
+<td>gen_abssym</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_t::out_specea' instead</td>
+</tr>
+<tr>
+<td>gen_comvar</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_t::out_specea' instead</td>
+</tr>
+<tr>
+<td>gen_extern</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_t::out_specea' instead</td>
+</tr>
+<tr>
+<td>intel_data</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_t::out_data' instead</td>
+</tr>
+<tr>
+<td>is_basic_block_end</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'const insn_t &amp;' input argument</td>
+</tr>
+<tr>
+<td>is_call_insn</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>converted input 'ea_t' argument to 'const insn_t &amp;'</td>
+</tr>
+<tr>
+<td>is_indirect_jump_insn</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>converted input 'ea_t' argument to 'const insn_t &amp;'</td>
+</tr>
+<tr>
+<td>is_ret_insn</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>converted input 'ea_t' argument to 'const insn_t &amp;'</td>
+</tr>
+</tbody>
+</table>
+<h3>ieee.h</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th align="center">[1]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eetol</td>
+<td align="center">*</td>
+</tr>
+<tr>
+<td>eetol64</td>
+<td align="center">*</td>
+</tr>
+<tr>
+<td>eetol64u</td>
+<td align="center">*</td>
+</tr>
+<tr>
+<td>realtoasc</td>
+<td align="center">*</td>
+</tr>
+</tbody>
+</table>
+<h3>ints.hpp (<strong>REMOVED</strong>)</h3>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>get_predef_cmt</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td></td>
+</tr>
+<tr>
+<td>get_vxd_func_name</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td></td>
+</tr>
+<tr>
+<td>get_predef_insn_cmt</td>
+<td></td>
+<td>moved to bytes.hpp</td>
+</tr>
+</tbody>
+</table>
+<h3>kernwin.hpp</h3>
+<p>NOTE: 'TForm', 'TCustomControl', and 'TWinControl' have been replaced by 'TWidget'</p>
+<p>NOTE: global variable 'dirty_infos' has been removed.</p>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+<li>[3] input argument changed from pointer to reference</li>
+<li>[4] return type changed from 'TForm <em>' to 'TWidget </em>'</li>
+<li>[5] input argument changed from 'TCustomControl <em>' to 'TWidget </em>'</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th align="center">[3]</th>
+<th align="center">[4]</th>
+<th align="center">[5]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>askfile_c</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>askfile_cv</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>askstr</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>close_form</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'form_actions_t::close' instead</td>
+</tr>
+<tr>
+<td>close_tform</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'close_widget' instead</td>
+</tr>
+<tr>
+<td>create_tform</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'find_widget' or 'create_empty_widget' instead</td>
+</tr>
+<tr>
+<td>enable_menu_item</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>superseded by actions</td>
+</tr>
+<tr>
+<td>entab</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>find_tform</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'find_widget' instead</td>
+</tr>
+<tr>
+<td>get_current_tform</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'get_current_widget' instead</td>
+</tr>
+<tr>
+<td>get_highlighted_identifier</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'get_current_viewer' and 'get_highlight' instead</td>
+</tr>
+<tr>
+<td>get_tform_idaview</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use the 'TWidget *' directly instead of obtaining the IDAView</td>
+</tr>
+<tr>
+<td>get_tform_title</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'get_widget_title' instead</td>
+</tr>
+<tr>
+<td>get_tform_type</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'get_widget_type' instead</td>
+</tr>
+<tr>
+<td>get_viewer_name</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'get_widget_title' instead</td>
+</tr>
+<tr>
+<td>init_kernel</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>is_chooser_tform</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'is_chooser_widget' instead</td>
+</tr>
+<tr>
+<td>print_disp</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'append_disp' instead</td>
+</tr>
+<tr>
+<td>set_menu_item_icon</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>superseded by actions</td>
+</tr>
+<tr>
+<td>switchto_tform</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'activate_widget' instead</td>
+</tr>
+<tr>
+<td>term_kernel</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>umsg</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>vaskstr</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>vumsg</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>activate_widget</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>append_disp</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>close_widget</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>create_empty_widget</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>find_widget</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_current_widget</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_highlight</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_widget_title</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_widget_type</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>is_buttoncb_t_type</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>is_chooser_widget</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>is_formchgcb_t_type</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>qcleanline</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>set_highlight</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>unpack_ds_to_buf</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>AskUsingForm_c</td>
+<td>ask_form</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>AskUsingForm_cv</td>
+<td>vask_form</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>OpenForm_c</td>
+<td>open_form</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>OpenForm_cv</td>
+<td>vopen_form</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>askaddr</td>
+<td>ask_addr</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>askbuttons_c</td>
+<td>ask_buttons</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>askbuttons_cv</td>
+<td>vask_buttons</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>askfile2_c</td>
+<td>ask_file</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>'filters' argument merged into 'format'</td>
+</tr>
+<tr>
+<td>askfile2_cv</td>
+<td>vask_file</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>'filters' argument merged into 'format'</td>
+</tr>
+<tr>
+<td>askident</td>
+<td>ask_ident</td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'char *' to 'bool'</td>
+</tr>
+<tr>
+<td>asklong</td>
+<td>ask_long</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>askqstr</td>
+<td>ask_str</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'hist' argument</td>
+</tr>
+<tr>
+<td>askseg</td>
+<td>ask_seg</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>asktext</td>
+<td>ask_text</td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'char *' to 'bool'</td>
+</tr>
+<tr>
+<td>askyn_c</td>
+<td>ask_yn</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>askyn_cv</td>
+<td>vask_yn</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>atob32</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>atob64</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>atoea</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>atos</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>attach_action_to_popup</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>input argument changed from 'TForm <em>' to 'TWidget </em>'</td>
+</tr>
+<tr>
+<td>attach_dynamic_action_to_popup</td>
+<td></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>input argument changed from 'TForm <em>' to 'TWidget </em>'</td>
+</tr>
+<tr>
+<td>b2a32</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>b2a64</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>back_char</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>moved to pro.h</td>
+</tr>
+<tr>
+<td>choose, choose2, choose3</td>
+<td>choose</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>choosers should use the new 'chooser_base_t' interface</td>
+</tr>
+<tr>
+<td>choose_srcp</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'segreg_area_t <em>' to 'sreg_range_t </em>'</td>
+</tr>
+<tr>
+<td>choose_til</td>
+<td></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>clearBreak</td>
+<td>clr_cancelled</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>clear_refresh_request</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>to be used instead of 'dirty_infos'</td>
+</tr>
+<tr>
+<td>create_code_viewer</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'TCustomControl <em>' to 'TWidget </em>'; 'parent' argument made optional and reordered</td>
+</tr>
+<tr>
+<td>create_custom_viewer</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'TCustomControl <em>' to 'TWidget </em>'; 'parent' argument made optional and reordered</td>
+</tr>
+<tr>
+<td>custom_viewer_jump</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>destroy_custom_viewer</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>detach_action_from_popup</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>input argument changed from 'TForm <em>' to 'TWidget </em>'</td>
+</tr>
+<tr>
+<td>ea2str</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>ea_viewer_history_push_and_jump</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>gen_disasm_text</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_8bit</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_action_label</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_action_shortcut</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_action_tooltip</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_chooser_data</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>argument type: 'uint32' changed to 'int'</td>
+</tr>
+<tr>
+<td>get_current_viewer</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'TCustomControl <em>' to 'TWidget </em>'</td>
+</tr>
+<tr>
+<td>get_custom_viewer_curline</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_custom_viewer_place</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_ea_viewer_history_info</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_kernel_version</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'bool' to 'ssize_t'</td>
+</tr>
+<tr>
+<td>get_output_curline</td>
+<td></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_output_selected_text</td>
+<td></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_view_renderer_type</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_viewer_place_type</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_viewer_user_data</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>is_idaview</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>is_refresh_requested</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>to be used instead of 'dirty_infos'</td>
+</tr>
+<tr>
+<td>jumpto</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>linearray_t::down</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'char <em>' to 'const qstring </em>'</td>
+</tr>
+<tr>
+<td>linearray_t::up</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'char <em>' to 'const qstring </em>'</td>
+</tr>
+<tr>
+<td>open_bpts_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>open_bpts_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_calls_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_disasm_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td>input argument changed from 'const areavec_t <em>' to 'const rangevec_t </em>'</td>
+</tr>
+<tr>
+<td>open_enums_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_exports_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_frame_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_funcs_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_hexdump_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_imports_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_loctypes_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_modules_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_names_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_navband_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_notepad_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_problems_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_segments_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_segregs_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_selectors_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_signatures_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_stack_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_strings_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_structs_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_tform</td>
+<td>display_widget</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>input argument changed from 'TForm <em>' to 'TWidget </em>'</td>
+</tr>
+<tr>
+<td>open_threads_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_tils_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_trace_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>open_xrefs_window</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>qstr2user</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>moved to pro.h</td>
+</tr>
+<tr>
+<td>r50_to_asc</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>read_range_selection</td>
+<td>read_selection</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td>WARNING: 'read_selection' has changed meaning</td>
+</tr>
+<tr>
+<td>read_selection</td>
+<td>read_range_selection</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>WARNING: 'read_selection' has changed meaning; added 'TWidget *' argument</td>
+</tr>
+<tr>
+<td>refresh_custom_viewer</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>repaint_custom_viewer</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>request_refresh</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'cnd' argument</td>
+</tr>
+<tr>
+<td>setBreak</td>
+<td>set_cancelled</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_code_viewer_handler</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>set_code_viewer_is_source</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>set_code_viewer_line_handlers</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>set_code_viewer_lines_alignment</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>set_code_viewer_lines_icon_margin</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>set_code_viewer_lines_radix</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>set_code_viewer_user_data</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>set_custom_viewer_handler</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>set_custom_viewer_handlers</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>set_custom_viewer_qt_aware</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>set_custom_viewer_range</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>set_view_renderer_type</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>show_hex_file</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>argument type: 'int32' changed to 'int64'</td>
+</tr>
+<tr>
+<td>skipSpaces</td>
+<td>skip_spaces</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>stoa</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>str2ea</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>str2ea_ex</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>str2user</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>moved to pro.h</td>
+</tr>
+<tr>
+<td>ui_load_new_file</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'temp_file' and 'ploaders'; input argument 'filename' changed from 'const char <em>' to 'qstring </em>'</td>
+</tr>
+<tr>
+<td>user2qstr</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>moved to pro.h</td>
+</tr>
+<tr>
+<td>user2str</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>moved to pro.h</td>
+</tr>
+<tr>
+<td>vaskqstr</td>
+<td>vask_str</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'hist' argument</td>
+</tr>
+<tr>
+<td>vasktext</td>
+<td>vask_text</td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'char *' to 'bool'</td>
+</tr>
+<tr>
+<td>vshow_hex_file</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>argument type: 'int32' changed to 'int64'</td>
+</tr>
+<tr>
+<td>wasBreak</td>
+<td>user_cancelled</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>lex.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lxascii</td>
+<td align="center">q</td>
+<td align="center">*</td>
+</tr>
+</tbody>
+</table>
+<h3>lines.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+<li>[3] return type changed from 'void' to 'bool'</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th align="center">[3]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MakeBorder</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::gen_border_line(false)' instead</td>
+</tr>
+<tr>
+<td>MakeLine</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::flush_buf' instead</td>
+</tr>
+<tr>
+<td>MakeNull</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::gen_empty_line' instead</td>
+</tr>
+<tr>
+<td>MakeSolidBorder</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::gen_border_line(true)' instead</td>
+</tr>
+<tr>
+<td>add_long_cmt_v</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'vadd_extra_line' instead</td>
+</tr>
+<tr>
+<td>close_comment</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::close_comment' instead</td>
+</tr>
+<tr>
+<td>describex</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'vadd_extra_line' instead</td>
+</tr>
+<tr>
+<td>finish_makeline</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::term_outctx' instead</td>
+</tr>
+<tr>
+<td>gen_cmt_line</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::gen_cmt_line' instead</td>
+</tr>
+<tr>
+<td>gen_cmt_line_v</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::gen_cmt_line_v' instead</td>
+</tr>
+<tr>
+<td>gen_collapsed_line</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::gen_collapsed_line' instead</td>
+</tr>
+<tr>
+<td>gen_colored_cmt_line_v</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::gen_colored_cmt_line_v' instead</td>
+</tr>
+<tr>
+<td>generate_big_comment</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::gen_block_cmt' instead</td>
+</tr>
+<tr>
+<td>generate_many_lines</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::gen_many_lines(-1, NULL, [...])' instead</td>
+</tr>
+<tr>
+<td>init_lines</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>init_lines_array</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::init_lines_array' instead</td>
+</tr>
+<tr>
+<td>printf_line</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::gen_printf' instead</td>
+</tr>
+<tr>
+<td>printf_line_v</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::gen_vprintf' instead</td>
+</tr>
+<tr>
+<td>save_line_in_array</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::save_buf' instead</td>
+</tr>
+<tr>
+<td>save_lines</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>save_sourcefiles</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>setup_makeline</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::setup_outctx' instead</td>
+</tr>
+<tr>
+<td>tag_addchr</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>tag_addstr</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>tag_off</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>tag_on</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_last_pfxlen</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>vadd_extra_line</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>add_long_cmt</td>
+<td>add_extra_cmt</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>add_pgm_cmt</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>describe</td>
+<td>add_extra_line</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>generate_disasm_line</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>generate_disassembly</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td>output argument is 'qstrvec_t'</td>
+</tr>
+<tr>
+<td>get_extra_cmt</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_sourcefile</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>argument type: 'area_t <em>' changed to 'range_t </em>'</td>
+</tr>
+<tr>
+<td>tag_addr</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td>return type changed from 'char *' to 'void'; added 'ins' argument</td>
+</tr>
+<tr>
+<td>tag_remove</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td>added 'init_level' argument</td>
+</tr>
+</tbody>
+</table>
+<h3>llong.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list</li>
+<li>[2] output argument changed from reference to pointer</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>print</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>llong_div</td>
+<td></td>
+<td align="center">*</td>
+<td align="center">*</td>
+</tr>
+<tr>
+<td>llong_udiv</td>
+<td></td>
+<td align="center">*</td>
+<td align="center">*</td>
+</tr>
+</tbody>
+</table>
+<h3>loader.hpp</h3>
+<p>NOTE: global variables 'database_flags', 'command_line_file', 'idb_path', and 'id0_path' have been removed.</p>
+<p>NOTE: class 'loader_jump' has been renamed to 'loader_failure_t'</p>
+<ul>
+<li>[1] output argument moved to beginning of argument list</li>
+<li>[2] input argument changed from 'int32' to 'qoff64_t'</li>
+<li>[3] return type changed from 'int32' to 'qoff64_t'</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th align="center">[3]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enum_plugins</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>init_loader_options</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>find_plugin</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>process_archive</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>base2file</td>
+<td></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>build_loaders_list</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'filename' argument (name of the input file for archives)</td>
+</tr>
+<tr>
+<td>clr_database_flag</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>to be used instead of 'database_flags'</td>
+</tr>
+<tr>
+<td>extract_module_from_archive</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>file2base</td>
+<td></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_fileregion_ea</td>
+<td></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_fileregion_offset</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_path</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>to be used instead of 'idb_path'</td>
+</tr>
+<tr>
+<td>hook_to_notification_point</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>moved to idp.hpp</td>
+</tr>
+<tr>
+<td>invoke_callbacks</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>moved to idp.hpp</td>
+</tr>
+<tr>
+<td>is_database_flag</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>to be used instead of 'database_flags'</td>
+</tr>
+<tr>
+<td>load_and_run_plugin</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>argument type: 'int' changed to 'size_t'</td>
+</tr>
+<tr>
+<td>load_binary_file</td>
+<td></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td>argument type: 'uint32' changed to 'uint64'</td>
+</tr>
+<tr>
+<td>load_dll_or_say</td>
+<td>load_core_module</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'entry' argument (name of plugin 'entrypoint' symbol)</td>
+</tr>
+<tr>
+<td>mem2base</td>
+<td></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>run_plugin</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>argument type: 'int' changed to 'size_t'</td>
+</tr>
+<tr>
+<td>save_database_ex</td>
+<td>save_database</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_database_flag</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>to be used instead of 'database_flags'</td>
+</tr>
+<tr>
+<td>set_path</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>to be used instead of 'idb_path'</td>
+</tr>
+<tr>
+<td>unhook_from_notification_point</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>moved to idp.hpp</td>
+</tr>
+</tbody>
+</table>
+<h3>moves.hpp</h3>
+<p>NOTE: 'curloc_t' and 'location_t' have been replaced by 'lochist_t'.</p>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>curloc_get</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>curloc_get_entry</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>curloc_hide_if_necessary</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>curloc_jump</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>curloc_jump_push</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>curloc_linkTo</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>curloc_mark</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>curloc_markdesc</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>curloc_markedpos</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>curloc_pop</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>curloc_unhide_if_necessary</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>location_get</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>location_get_entry</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>location_jump</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>location_linkTo</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>location_mark</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>location_pop</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>location_push_and_jump</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>graph_location_info_t::deserialize</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>graph_location_info_t::serialize</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>renderer_info_pos_t::deserialize</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>renderer_info_pos_t::serialize</td>
+</tr>
+</tbody>
+</table>
+<h3>nalt.hpp</h3>
+<p>NOTE: global variable 'import_node' has been removed.</p>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_del_item_color</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>_del_strid</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>_set_item_color</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>_set_item_color</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>_set_strid</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del__segtrans</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_enum_id0</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_enum_id1</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_fop1</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_fop2</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_fop3</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_fop4</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_fop5</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_fop6</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_graph_groups0</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_jumptable_info</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_linnum0</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_manual_insn0</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_nalt_cmt</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_nalt_rptcmt</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_stroff0</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_stroff1</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_wide_value</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get__segtrans</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_auto_plugins</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_custom_refinfos</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'get_refinfo_descs' instead</td>
+</tr>
+<tr>
+<td>get_enum_id0</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_enum_id1</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_fop1</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_fop2</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_fop3</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_fop4</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_fop5</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_fop6</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_graph_groups0</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_jumptable_info</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_linnum0</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_manual_insn0</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_nalt_cmt</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_nalt_rptcmt</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_stroff0</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_stroff1</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_wide_value</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>is_unicode</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'get_strtype_bpu' instead</td>
+</tr>
+<tr>
+<td>set__segtrans</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_auto_plugins</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_enum_id0</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_enum_id1</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_fop1</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_fop2</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_fop3</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_fop4</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_fop5</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_fop6</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_graph_groups0</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_jumptable_info</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_linnum0</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_manual_insn0</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_nalt_cmt</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_nalt_rptcmt</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_stroff0</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_stroff1</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_wide_value</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>clr_notproc</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>delete_imports</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>to be used instead of 'auto_display'</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>ea2node</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>find_custom_refinfo</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_abi_name</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_archive_path</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_custom_refinfo</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_custom_refinfo_handler</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_encoding_bpu</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_gotea</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_refinfo_descs</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_strtype_bpu</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>getnode</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>is_notproc</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>is_reftype_target_optional</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>node2ea</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>set_archive_path</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>set_gotea</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>set_notproc</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>change_encoding_name</td>
+<td>rename_encoding</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_switch_info_ex</td>
+<td>del_switch_info</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_tinfo2</td>
+<td>del_tinfo</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del_tinfo2(,n)</td>
+<td>del_op_tinfo</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_array_parameters</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td>removed 'bufsize' argument</td>
+</tr>
+<tr>
+<td>get_asm_inc_file</td>
+<td></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_custom_data_type_ids</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td>removed 'bufsize' argument</td>
+</tr>
+<tr>
+<td>get_default_encoding_idx</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>argument type: 'int32' changed to 'int'</td>
+</tr>
+<tr>
+<td>get_encodings_count</td>
+<td>get_encoding_qty</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_import_module_name</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_op_tinfo2</td>
+<td>get_op_tinfo</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_refinfo</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_str_type_code</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'char' to 'uchar'; argument type: 'uval_t' changed to 'int32'</td>
+</tr>
+<tr>
+<td>get_strid</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'ea_t' to 'tid_t'</td>
+</tr>
+<tr>
+<td>get_switch_info_ex</td>
+<td>get_switch_info</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td>removed 'bufsize' argument</td>
+</tr>
+<tr>
+<td>get_tinfo2</td>
+<td>get_tinfo</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_xrefpos</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td>removed 'bufsize' argument</td>
+</tr>
+<tr>
+<td>read_struc_path</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td>argument type: 'netnode' changed to 'ea_t'</td>
+</tr>
+<tr>
+<td>set_default_encoding_idx</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>argument type: 'int32' changed to 'int'</td>
+</tr>
+<tr>
+<td>set_op_tinfo2</td>
+<td>set_op_tinfo</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_switch_info_ex</td>
+<td>set_switch_info</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>input argument changed from 'const switch_info_ex_t *' to 'const switch_info_t &amp;'</td>
+</tr>
+<tr>
+<td>set_tinfo2</td>
+<td>set_tinfo</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>write_struc_path</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>argument type: 'netnode' changed to 'ea_t'</td>
+</tr>
+</tbody>
+</table>
+<h3>name.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+<li>[3] output argument changed from reference to pointer</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th align="center">[3]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gen_name_decl</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::gen_name_decl' instead</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>is_strlit_cp</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>is_valid_cp</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>set_cp_validity</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>append_struct_fields2</td>
+<td>append_struct_fields</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>demangle_name2</td>
+<td>demangle_name</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>do_name_anyway</td>
+<td>force_name</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>removed 'maxlen' argument</td>
+</tr>
+<tr>
+<td>extract_name2</td>
+<td>extract_name</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_debug_name2</td>
+<td>get_debug_name</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_debug_names</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_ea_name</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>removed const from 'gtni' argument</td>
+</tr>
+<tr>
+<td>get_name_expr</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_name_value</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_nice_colored_name</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_struct_operand</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_true_name</td>
+<td>get_name</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>is_ident_char</td>
+<td>is_ident_cp</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>is_visible_char</td>
+<td>is_visible_cp</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>isident</td>
+<td>is_ident</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>validate_name3</td>
+<td>validate_name</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'type' and 'flags' arguments</td>
+</tr>
+</tbody>
+</table>
+<h3>netnode.hpp</h3>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::altdel_ea</td>
+<td>to be used instead of 'netnode::altdel' for addresses (ea_t)</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::altset_ea</td>
+<td>to be used instead of 'netnode::altset' for addresses (ea_t)</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::altval_ea</td>
+<td>to be used instead of 'netnode::altval' for addresses (ea_t)</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::blobsize_ea</td>
+<td>to be used instead of 'netnode::blobsize' for addresses (ea_t)</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::chardel_ea</td>
+<td>to be used instead of 'netnode::chardel' for addresses (ea_t)</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::charset_ea</td>
+<td>to be used instead of 'netnode::charset' for addresses (ea_t)</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::charval_ea</td>
+<td>to be used instead of 'netnode::charval' for addresses (ea_t)</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::delblob_ea</td>
+<td>to be used instead of 'netnode::delblob' for addresses (ea_t)</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::eadel</td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::eadel_idx8</td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::eaget</td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::eaget_idx8</td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::easet</td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::easet_idx8</td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::getblob_ea</td>
+<td>to be used instead of 'netnode::getblob' for addresses (ea_t)</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::setblob_ea</td>
+<td>to be used instead of 'netnode::setblob' for addresses (ea_t)</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::supdel_ea</td>
+<td>to be used instead of 'netnode::supdel' for addresses (ea_t)</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::supset_ea</td>
+<td>to be used instead of 'netnode::supset' for addresses (ea_t)</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::supstr_ea</td>
+<td>to be used instead of 'netnode::supstr' for addresses (ea_t)</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>netnode::supval_ea</td>
+<td>to be used instead of 'netnode::supval' for addresses (ea_t)</td>
+</tr>
+<tr>
+<td>netnode::getblob</td>
+<td></td>
+<td>added variant that works with 'qvector<T> *'</td>
+</tr>
+<tr>
+<td>netnode::hash1st</td>
+<td></td>
+<td>added variant that works with 'qstring *'</td>
+</tr>
+<tr>
+<td>netnode::hashlast</td>
+<td></td>
+<td>added variant that works with 'qstring *'</td>
+</tr>
+<tr>
+<td>netnode::hashnxt</td>
+<td></td>
+<td>added variant that works with 'qstring *'</td>
+</tr>
+<tr>
+<td>netnode::hashprev</td>
+<td></td>
+<td>added variant that works with 'qstring *'</td>
+</tr>
+<tr>
+<td>netnode::hashstr</td>
+<td></td>
+<td>added variant that works with 'qstring *'</td>
+</tr>
+<tr>
+<td>netnode::qgetblob</td>
+<td></td>
+<td>added variant that works with 'qstring *'</td>
+</tr>
+<tr>
+<td>netnode::supstr</td>
+<td></td>
+<td>added variant that works with 'qstring *'</td>
+</tr>
+<tr>
+<td>netnode::valstr</td>
+<td></td>
+<td>added variant that works with 'qstring *'</td>
+</tr>
+</tbody>
+</table>
+<h3>offset.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+<li>[3] input argument 'refinfo_t &amp;' made const</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th align="center">[3]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>calc_reference_basevalue</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'calc_reference_data' instead</td>
+</tr>
+<tr>
+<td>calc_reference_target</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'calc_reference_data' instead</td>
+</tr>
+<tr>
+<td>set_offset</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'calc_offset_base' and 'op_plain_offset' instead</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>add_refinfo_dref</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>calc_basevalue</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>calc_offset_base</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>calc_reference_data</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>op_plain_offset</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_offset_expr</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_offset_expression</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>problems.h (<strong>RENAMED</strong> from queue.hpp)</h3>
+<p>NOTE: 'qtype_t' has been changed to 'problist_id_t'.</p>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QueueGet</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_long_queue_name</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>Use 'get_problem_name(type, true);' instead</td>
+</tr>
+<tr>
+<td>get_short_queue_name</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>Use 'get_problem_name(type, false);' instead</td>
+</tr>
+<tr>
+<td>mark_ida_decision</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>unmark_ida_decision</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_problem_name</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>QueueDel</td>
+<td>forget_problem</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'void' to 'bool'</td>
+</tr>
+<tr>
+<td>QueueGetMessage</td>
+<td>get_problem_desc</td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>QueueGetType</td>
+<td>get_problem</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>QueueIsPresent</td>
+<td>is_problem_present</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>QueueSet</td>
+<td>remember_problem</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>prodir.h</h3>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>qfindclose64</td>
+<td>qfindclose</td>
+</tr>
+<tr>
+<td>qfindfirst64</td>
+<td>qfindfirst</td>
+</tr>
+<tr>
+<td>qfindnext64</td>
+<td>qfindnext</td>
+</tr>
+</tbody>
+</table>
+<h3>pro.h</h3>
+<p>NOTE: global variables 'codepage' and 'oemcodepage' have been removed.</p>
+<ul>
+<li>[1] output argument moved to beginning of argument list</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>c2ustr</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td>use 'utf8_utf16' instead</td>
+</tr>
+<tr>
+<td>char2oem</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>convert_codepage</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>create_hit_counter</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>expand_argv</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_codepages</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>hit_counter_timer</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>oem2char</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>reg_hit_counter</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>u2cstr</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td>use 'utf16_utf8' instead</td>
+</tr>
+<tr>
+<td>win_utf2idb</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>acp_utf8</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>change_codepage</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>idb_utf8</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>is_valid_utf8</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>put_utf8_char</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>qchdir</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>qustrlen</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>scr_utf8</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>skip_utf8</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>utf8_scr</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>utf8_wchar16</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>utf8_wchar32</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>back_char</td>
+<td></td>
+<td align="center"></td>
+<td>moved from kernwin.hpp</td>
+</tr>
+<tr>
+<td>convert_encoding</td>
+<td></td>
+<td align="center">*</td>
+<td>return type changed from 'int' to 'ssize_t'</td>
+</tr>
+<tr>
+<td>get_nsec_stamp</td>
+<td></td>
+<td align="center"></td>
+<td>output argument changed from 'uint64 *' to the 'uint64' return value</td>
+</tr>
+<tr>
+<td>parse_command_line3</td>
+<td>parse_command_line</td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>qchsize64</td>
+<td>qchsize</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>qfileexist64</td>
+<td>qfileexist</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>qfilesize64</td>
+<td>qfilesize</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>qfstat64</td>
+<td>qfstat</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>qseek64</td>
+<td>qseek</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>qstat64</td>
+<td>qstat</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>qstr2user</td>
+<td></td>
+<td align="center"></td>
+<td>moved from kernwin.hpp; added 'nsyms' argument</td>
+</tr>
+<tr>
+<td>qtell64</td>
+<td>qtell</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>qwait</td>
+<td></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>qwait_for_handles</td>
+<td></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>qwait_timed</td>
+<td></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>search_path</td>
+<td></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>str2user</td>
+<td></td>
+<td align="center"></td>
+<td>moved from kernwin.hpp</td>
+</tr>
+<tr>
+<td>unicode_utf8</td>
+<td>utf16_utf8</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>user2qstr</td>
+<td></td>
+<td align="center"></td>
+<td>moved from kernwin.hpp</td>
+</tr>
+<tr>
+<td>user2str</td>
+<td></td>
+<td align="center"></td>
+<td>moved from kernwin.hpp</td>
+</tr>
+<tr>
+<td>utf8_unicode</td>
+<td>utf8_utf16</td>
+<td align="center"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>pronet.h</h3>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>qhost2addr</td>
+</tr>
+</tbody>
+</table>
+<h3>range.h (<strong>RENAMED</strong> from area.hpp)</h3>
+<p>NOTE: some classes have been renamed:
+- 'area_t' has been renamed to 'range_t'
+- 'areavec_t' has been renamed to 'rangevec_t'
+- 'areaset_t' has been renamed to 'rangeset_t'</p>
+<p>NOTE: the classes 'rangecb_t', 'ranges_cache_t', and 'lock_range' have been removed</p>
+<h3>registry.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reg_read_strlist</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>reg_read_string</td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td>removed variant with default value</td>
+</tr>
+</tbody>
+</table>
+<h3>search.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>user2bin</td>
+<td></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>find_imm</td>
+<td></td>
+<td align="center"></td>
+<td>argument type: 'sval_t' changed to 'uval_t'</td>
+</tr>
+<tr>
+<td>find_void</td>
+<td>find_suspop</td>
+<td align="center"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>segment.hpp</h3>
+<p>NOTE: global variables 'hidden_ranges', 'funcs', and 'segs' have been removed.</p>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+<li>[3] added 'flags' argument</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th></th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th align="center">[3]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>del_segment_cmt</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'set_range_cmt("")' instead</td>
+</tr>
+<tr>
+<td>vset_segm_name</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_segm_num</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>to be used instead of 'segs.get_range_num()'</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>lock_segm</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>to be used instead of 'rangecb_t_unlock_range(&amp;segs)'</td>
+</tr>
+<tr>
+<td>add_segm</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>ask_selector</td>
+<td>sel2para</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>correct_address</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'skip_check' argument</td>
+</tr>
+<tr>
+<td>del_segment_translations</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'bool' to 'void'</td>
+</tr>
+<tr>
+<td>get_segm_class</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_segm_name</td>
+<td>get_visible_segm_name</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>removed variant with 'ea_t' argument</td>
+</tr>
+<tr>
+<td>get_segment_cmt</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td>return type changed from 'char *' to 'ssize_t'; added 'repeatable' argument</td>
+</tr>
+<tr>
+<td>get_segment_translations</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'ea_t *' to 'ssize_t'; output argument converted 'eavec_t'</td>
+</tr>
+<tr>
+<td>get_true_segm_name</td>
+<td>get_segm_name</td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>getn_selector</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_segm_class</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>set_segm_name</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td>arguments converted from printf-style to simple 'const char *'</td>
+</tr>
+<tr>
+<td>set_segment_cmt</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>input argument 'segment_t *' made const</td>
+</tr>
+<tr>
+<td>set_segment_translations</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>input argument converted to 'const eavec_t &amp;'</td>
+</tr>
+<tr>
+<td>std_gen_segm_footer</td>
+<td>std_out_segm_footer</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>converted to outctx_t; input argument changed to segment_t*</td>
+</tr>
+</tbody>
+</table>
+<h3>segregs.hpp (<strong>RENAMED</strong> from srarea.hpp)</h3>
+<p>NOTE: type 'segreg_area_t' has been renamed to 'sreg_range_t'</p>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>copy_srareas</td>
+<td>copy_sreg_ranges</td>
+<td></td>
+</tr>
+<tr>
+<td>del_srarea</td>
+<td>del_sreg_range</td>
+<td>WARNING: argument order has swapped</td>
+</tr>
+<tr>
+<td>get_prev_srarea</td>
+<td>get_prev_sreg_range</td>
+<td>argument type: 'segreg_area_t' changed to 'sreg_range_t'</td>
+</tr>
+<tr>
+<td>get_segreg</td>
+<td>get_sreg</td>
+<td></td>
+</tr>
+<tr>
+<td>get_srarea2</td>
+<td>get_sreg_range</td>
+<td>argument type: 'segreg_area_t' changed to 'sreg_range_t'</td>
+</tr>
+<tr>
+<td>get_srarea_num</td>
+<td>get_sreg_range_num</td>
+<td>WARNING: argument order has swapped</td>
+</tr>
+<tr>
+<td>get_srareas_qty2</td>
+<td>get_sreg_ranges_qty</td>
+<td></td>
+</tr>
+<tr>
+<td>getn_srarea2</td>
+<td>getn_sreg_range</td>
+<td>argument type: 'segreg_area_t' changed to 'sreg_range_t'</td>
+</tr>
+<tr>
+<td>set_default_segreg_value</td>
+<td>set_default_sreg_value</td>
+<td></td>
+</tr>
+<tr>
+<td>split_srarea</td>
+<td>split_sreg_range</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>sistack.h (<strong>REMOVED</strong>)</h3>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sistack_t_size</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+<tr>
+<td>sistack_t_flush</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+</tr>
+</tbody>
+</table>
+<h3>strlist.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>refresh_strlist</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_strlist_options</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>build_strlist</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>clear_strlist</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_strlist_options</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_strlist_item</td>
+<td></td>
+<td align="center">*</td>
+<td>argument type: 'int' changed to 'size_t'</td>
+</tr>
+</tbody>
+</table>
+<h3>struct.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>get_member_by_fullname</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>get_member_cmt</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+</tr>
+<tr>
+<td>get_member_name2</td>
+<td>get_member_name</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>get_member_tinfo2</td>
+<td>get_member_tinfo</td>
+<td align="center">*</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>get_or_guess_member_tinfo2</td>
+<td>get_or_guess_member_tinfo</td>
+<td align="center">*</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>get_struc_cmt</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+</tr>
+<tr>
+<td>retrieve_member_info</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>save_struc2</td>
+<td>save_struc</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>set_member_tinfo2</td>
+<td>set_member_tinfo</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<h3>tryblks.hpp (<strong>NEW</strong> file)</h3>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>add_tryblk</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>del_tryblks</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_tryblks</td>
+</tr>
+</tbody>
+</table>
+<h3>typeinf.hpp</h3>
+<p>NOTE: global variable 'idati' has been removed.</p>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>based_ptr_name_and_size</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>callregs_init_regs</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>choose_local_type</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>create_numbered_type_reference</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>equal_types</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_de</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_default_enum_size</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_func_cvtarg_map</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_named_type_size</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_referred_ordinal</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_stkarg_offset</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_unk_type_bit</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>is_restype_array</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>is_restype_bitfld</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>is_restype_complex</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>is_restype_const</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>is_restype_floating</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>is_restype_func</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>is_restype_ptr</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>is_restype_union</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>max_ptr_size</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>rename_named_type</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_named_type</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'tinfo_t::set_named_type' instead</td>
+</tr>
+<tr>
+<td>set_named_type64</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'tinfo_t::set_named_type' instead</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>append_abi_opts</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>gcc_layout</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_arg_addrs</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_idati</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>to be used instead of 'idati'</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>remove_abi_opts</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>resolve_typedef</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>set_compiler_string</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>add_til2</td>
+<td>add_til</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>append_tinfo_covered</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>argument type: 'areaset_t' has been renamed to 'rangeset_t'</td>
+</tr>
+<tr>
+<td>apply_callee_tinfo</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'void' to 'bool'</td>
+</tr>
+<tr>
+<td>apply_cdecl2</td>
+<td>apply_cdecl</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>apply_tinfo2</td>
+<td>apply_tinfo</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>apply_tinfo_to_stkarg</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'insn' argument</td>
+</tr>
+<tr>
+<td>build_anon_type_name</td>
+<td></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>calc_c_cpp_name4</td>
+<td>calc_c_cpp_name</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>calc_tinfo_gaps</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>argument type: 'areaset_t' has been renamed to 'rangeset_t'</td>
+</tr>
+<tr>
+<td>choose_local_tinfo</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'def_ord' argument</td>
+</tr>
+<tr>
+<td>choose_named_type2</td>
+<td>choose_named_type</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td>the original 'choose_named_type' has been removed</td>
+</tr>
+<tr>
+<td>create_numbered_type_name</td>
+<td></td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td>return type changed from 'size_t' to 'ssize_t'</td>
+</tr>
+<tr>
+<td>decorate_name3</td>
+<td>decorate_name</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'type' argument</td>
+</tr>
+<tr>
+<td>del_tinfo_attr</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'make_copy' argument</td>
+</tr>
+<tr>
+<td>deref_ptr2</td>
+<td>deref_ptr</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>extract_argloc</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>find_tinfo_udt_member</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>format_cdata2</td>
+<td>format_cdata</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>gen_decorate_name3</td>
+<td>gen_decorate_name</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>the original 'gen_decorate_name' has been removed; added 'type' argument</td>
+</tr>
+<tr>
+<td>get_c_header_path</td>
+<td></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_c_macros</td>
+<td></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_enum_member_expr2</td>
+<td>get_enum_member_expr</td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_idainfo_by_type3</td>
+<td>get_idainfo_by_type</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_int_type_bit</td>
+<td>get_scalar_bt</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_tinfo_pdata</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get_tinfo_size</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>guess_tinfo2</td>
+<td>guess_tinfo</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>load_til2</td>
+<td>load_til</td>
+<td align="center"></td>
+<td align="center">*</td>
+<td>the original 'load_til' has been removed; added 'tildir' argument</td>
+</tr>
+<tr>
+<td>load_til_header</td>
+<td></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>lower_type2</td>
+<td>lower_type</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>optimize_argloc</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>argument type: 'areaset_t' has been renamed to 'rangeset_t'</td>
+</tr>
+<tr>
+<td>parse_decl2</td>
+<td>parse_decl</td>
+<td align="center">q</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>print_type3</td>
+<td>print_type</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>remove_tinfo_pointer</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>save_tinfo</td>
+<td></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_abi_name</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'user_level' argument</td>
+</tr>
+<tr>
+<td>set_compiler2</td>
+<td>set_compiler</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>set_numbered_type</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'bool' to 'tinfo_code_t'</td>
+</tr>
+<tr>
+<td>verify_argloc</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>argument type: 'areaset_t' has been renamed to 'rangeset_t'</td>
+</tr>
+</tbody>
+</table>
+<h3>ua.hpp</h3>
+<p>NOTE: class 'outctx_base_t' has been added to replace functions that generate the disassembly text</p>
+<p>NOTE: global variable 'lookback' has been removed.</p>
+<ul>
+<li>[1] output argument moved to beginning of argument list<ul>
+<li>q: argument is a qstring</li>
+</ul>
+</li>
+<li>[2] output buffer converted to qstring</li>
+<li>[3] added input/output 'insn_t &amp;insn' argument</li>
+<li>[4] added input 'const insn_t &amp;insn' argument</li>
+<li>[5] added output 'insn_t *out' argument</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>new name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+<th align="center">[3]</th>
+<th align="center">[4]</th>
+<th align="center">[5]</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OutBadInstruction</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>OutChar</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::out_char' instead</td>
+</tr>
+<tr>
+<td>OutImmChar</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::out_immchar_cmts' instead</td>
+</tr>
+<tr>
+<td>OutLine</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::out_line' instead</td>
+</tr>
+<tr>
+<td>OutLong</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::out_btoa' instead</td>
+</tr>
+<tr>
+<td>OutMnem</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::out_mnem' instead</td>
+</tr>
+<tr>
+<td>OutValue</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::out_value' instead</td>
+</tr>
+<tr>
+<td>get_output_ptr</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>init_output_buffer</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>out_addr_tag</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::out_addr_tag' instead</td>
+</tr>
+<tr>
+<td>out_colored_register_line</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::out_colored_register_line' instead</td>
+</tr>
+<tr>
+<td>out_insert</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::outbuf' directly instead</td>
+</tr>
+<tr>
+<td>out_line</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::out_line' instead</td>
+</tr>
+<tr>
+<td>out_long</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::out_long' instead</td>
+</tr>
+<tr>
+<td>out_name_expr</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::out_name_expr' instead</td>
+</tr>
+<tr>
+<td>out_one_operand</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::out_one_operand' instead</td>
+</tr>
+<tr>
+<td>out_snprintf</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::out_printf' instead</td>
+</tr>
+<tr>
+<td>out_symbol</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::out_symbol' instead</td>
+</tr>
+<tr>
+<td>out_tagoff</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::out_tagoff' instead</td>
+</tr>
+<tr>
+<td>out_tagon</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'outctx_base_t::out_tagon' instead</td>
+</tr>
+<tr>
+<td>set_output_ptr</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>term_output_buffer</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>ua_dodata2</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'insn_t::create_op_data' instead</td>
+</tr>
+<tr>
+<td>ua_next_byte</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'insn_t::get_next_byte' instead</td>
+</tr>
+<tr>
+<td>ua_next_long</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'insn_t::get_next_word' instead</td>
+</tr>
+<tr>
+<td>ua_next_qword</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'insn_t::get_next_dword' instead</td>
+</tr>
+<tr>
+<td>ua_next_word</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'insn_t::get_next_qword' instead</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>can_decode</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>create_outctx</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>get_lookback</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>to be used instead of 'lookback'</td>
+</tr>
+<tr>
+<td>&lt;<strong>added</strong>&gt;</td>
+<td>map_ea</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>codeSeg</td>
+<td>map_code_ea</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td>input arguments changed to either 'const op_t &amp;op' or 'ea_t addr, int opnum'</td>
+</tr>
+<tr>
+<td>construct_macro</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>create_insn</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>dataSeg, dataSeg_op</td>
+<td>map_data_ea</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td>input arguments changed to either 'const op_t &amp;op' or 'ea_t addr, int opnum'</td>
+</tr>
+<tr>
+<td>dataSeg_opreg</td>
+<td>calc_dataseg</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>decode_insn</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>decode_preceding_insn</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>decode_prev_insn</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td></td>
+</tr>
+<tr>
+<td>get_dtyp_by_size</td>
+<td>get_dtype_by_size</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>return type changed from 'char' to 'op_dtype_t'</td>
+</tr>
+<tr>
+<td>get_dtyp_flag</td>
+<td>get_dtype_flag</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>argument type: 'char' changed to 'op_dtype_t'</td>
+</tr>
+<tr>
+<td>get_dtyp_size</td>
+<td>get_dtype_size</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>argument type: 'char' changed to 'op_dtype_t'</td>
+</tr>
+<tr>
+<td>get_operand_immvals</td>
+<td>get_immvals</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'flags_t' and 'cache' arguments</td>
+</tr>
+<tr>
+<td>get_spoiled_reg</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>guess_table_address</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>guess_table_size</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>out_real</td>
+<td>print_fpval</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>showAsChar</td>
+<td>print_charlit</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>ua_add_cref</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'insn_t::add_cref' instead</td>
+</tr>
+<tr>
+<td>ua_add_dref</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'insn_t::add_dref' instead</td>
+</tr>
+<tr>
+<td>ua_add_off_drefs2</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'insn_t::add_off_drefs' instead</td>
+</tr>
+<tr>
+<td>ua_mnem</td>
+<td>print_insn_mnem</td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>ua_outop2</td>
+<td>print_operand</td>
+<td align="center">q</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>added 'printop_t' argument</td>
+</tr>
+<tr>
+<td>ua_stkvar2</td>
+<td>&lt;<strong>removed</strong>&gt;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>use 'insn_t::create_stkvar' instead</td>
+</tr>
+</tbody>
+</table>
+<h3>xref.hpp</h3>
+<ul>
+<li>[1] output argument moved to beginning of argument list</li>
+<li>[2] input argument changed from pointer to reference</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th align="center">[1]</th>
+<th align="center">[2]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>calc_switch_cases</td>
+<td align="center">*</td>
+<td align="center">*</td>
+</tr>
+<tr>
+<td>create_switch_table</td>
+<td align="center"></td>
+<td align="center">*</td>
+</tr>
+<tr>
+<td>create_switch_xrefs</td>
+<td align="center"></td>
+<td align="center">*</td>
+</tr>
+</tbody>
+</table>

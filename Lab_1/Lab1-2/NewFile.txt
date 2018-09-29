@@ -1,0 +1,5 @@
+[Lab 1-2] orw [50]
+
+Only open, read, and write are allowed. 
+Flag is at /home/orw/flag 
+Service is on csie.ctf.tw:10124 

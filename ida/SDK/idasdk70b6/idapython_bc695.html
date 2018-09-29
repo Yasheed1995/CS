@@ -1,0 +1,43 @@
+<h1>IDAPython for IDA 7.00: backward-compatibility with 6.95 APIs</h1>
+
+<h2>Availability of the backward-compatibility code</h2>
+
+<ul>
+<li><p>Backward-compatibility is provided by python.cfg's
+<code>AUTOIMPORT_COMPAT_IDA695</code> directive. This directive is
+currently turned on by default, but in the future it will:</p>
+
+<ol>
+<li>be turned off by default</li>
+<li>eventually disappear, and all the corresponding code will be removed</li>
+</ol></li>
+<li><p>Consequently IDAPython script/plugin writers should try and port
+their code, with the help of the porting guide XXX FIXME URL? XXX.</p></li>
+<li><p>Once you have done the porting, please check that your code works
+with <code>AUTOIMPORT_COMPAT_IDA695</code> set to <code>NO</code>.</p></li>
+<li><p>If anything proves too hard or confusing, please let us know about
+it on <a href="&#x6D;&#97;&#x69;&#108;&#116;&#111;:&#x73;&#117;&#112;&#x70;&#x6F;&#x72;&#x74;&#64;he&#x78;r&#97;&#x79;&#x73;&#46;&#x63;&#x6F;&#x6D;">&#x73;&#117;&#112;&#x70;&#x6F;&#x72;&#x74;&#64;he&#x78;r&#97;&#x79;&#x73;&#46;&#x63;&#x6F;&#x6D;</a>, and we will help you, either by fixing
+IDAPython if needed, or by improving the documentation.</p></li>
+</ul>
+
+<h2>Coverage of the backward-compatibility code</h2>
+
+<ul>
+<li><p>We did what was reasonably feasible, to provide an IDAPython API
+that's as backward-compatible as possible with the IDA 6.95 API</p></li>
+<li><p>However, we considered it unreasonable for some parts of the API
+to be ported. Most notably:</p>
+
+<ul>
+<li>the "processor module" API: existing processor modules will
+have to be ported to the new API. Please see the SDK's
+<code>module/script/proctemplate.py</code> (or any other <code>*.py</code> file in
+that directory) for examples how to use the new API.</li>
+</ul></li>
+<li><p>Most (all?) of the renamed functions, properties, etc... should be
+covered, in all modules: <code>idaapi</code>, <code>idc</code>, ...
+If something doesn't work/isn't there anymore, it's likely an
+omission from our side.</p></li>
+<li><p>Please let us know about any missing bits &amp; pieces, that you
+believe should be there and that we might have forgotten!</p></li>
+</ul>
