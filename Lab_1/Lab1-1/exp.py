@@ -3,7 +3,7 @@ from IPython import embed
 
 context.arch = 'amd64'
 
-r = remote('127.0.0.1, 7127')
+r = remote('127.0.0.1', 8888)
 
 a = asm("""
         push 0x68
